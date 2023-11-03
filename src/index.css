@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 80%;
+  margin-inline: auto;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 1rem;
+  cursor: pointer;
+  padding: 1.5em 0;
+  margin-top: 50px;
+}
+
+.card {
+  background: var(--bg-colour);
+  box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  object-fit: cover;
+
+}
+
+.featured {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.card-content {
+  position: relative;
+}
+
+.checkbox {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  width: 50px;
+  height: 20px;
+}
+
+.card:hover .checkbox,
+.checked {
+  display: block;
+}
+
+.checkbox:not(.checked) {
+  display: none;
+}
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-thumb {
+  margin: 0.5rem;
+  max-width: 150px;
+}
+
+.image-thumb img {
+  width: 100%;
+  height: auto;
+}
